@@ -14,6 +14,9 @@
 		EF89FC6421A1980B0073DCF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89FC6221A1980B0073DCF0 /* LaunchScreen.storyboard */; };
 		EF89FC6F21A1980C0073DCF0 /* Test2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89FC6E21A1980C0073DCF0 /* Test2Tests.swift */; };
 		EF89FC7A21A1980C0073DCF0 /* Test2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89FC7921A1980C0073DCF0 /* Test2UITests.swift */; };
+		EF89FC8921A1983E0073DCF0 /* GeographicLibFiles in Resources */ = {isa = PBXBuildFile; fileRef = EF89FC8721A1983E0073DCF0 /* GeographicLibFiles */; };
+		EF89FC8A21A1983E0073DCF0 /* GeographicLib in Resources */ = {isa = PBXBuildFile; fileRef = EF89FC8821A1983E0073DCF0 /* GeographicLib */; };
+		EF89FC8C21A1992D0073DCF0 /* StaticMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89FC8B21A1992D0073DCF0 /* StaticMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		EF89FC7521A1980C0073DCF0 /* Test2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF89FC7921A1980C0073DCF0 /* Test2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2UITests.swift; sourceTree = "<group>"; };
 		EF89FC7B21A1980C0073DCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF89FC8721A1983E0073DCF0 /* GeographicLibFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GeographicLibFiles; sourceTree = "<group>"; };
+		EF89FC8821A1983E0073DCF0 /* GeographicLib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GeographicLib; sourceTree = "<group>"; };
+		EF89FC8B21A1992D0073DCF0 /* StaticMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,13 @@
 			children = (
 				EF89FC5921A1980B0073DCF0 /* AppDelegate.swift */,
 				EF89FC5B21A1980B0073DCF0 /* ViewController.swift */,
+				EF89FC8B21A1992D0073DCF0 /* StaticMethods.swift */,
 				EF89FC5D21A1980B0073DCF0 /* Main.storyboard */,
 				EF89FC6021A1980B0073DCF0 /* Assets.xcassets */,
 				EF89FC6221A1980B0073DCF0 /* LaunchScreen.storyboard */,
 				EF89FC6521A1980B0073DCF0 /* Info.plist */,
+				EF89FC8821A1983E0073DCF0 /* GeographicLib */,
+				EF89FC8721A1983E0073DCF0 /* GeographicLibFiles */,
 			);
 			path = Test2;
 			sourceTree = "<group>";
@@ -230,8 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF89FC6421A1980B0073DCF0 /* LaunchScreen.storyboard in Resources */,
+				EF89FC8921A1983E0073DCF0 /* GeographicLibFiles in Resources */,
 				EF89FC6121A1980B0073DCF0 /* Assets.xcassets in Resources */,
 				EF89FC5F21A1980B0073DCF0 /* Main.storyboard in Resources */,
+				EF89FC8A21A1983E0073DCF0 /* GeographicLib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +269,7 @@
 			files = (
 				EF89FC5C21A1980B0073DCF0 /* ViewController.swift in Sources */,
 				EF89FC5A21A1980B0073DCF0 /* AppDelegate.swift in Sources */,
+				EF89FC8C21A1992D0073DCF0 /* StaticMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,8 +444,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VFL8GC5L8N;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = Test2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,6 +456,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = globaldpi.com.Test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,8 +466,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VFL8GC5L8N;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				INFOPLIST_FILE = Test2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = globaldpi.com.Test2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
